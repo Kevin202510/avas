@@ -437,7 +437,8 @@
         </form>
 
       </div>
-    </section><!-- End Book A Table Section -->
+    </section>
+    <!-- End Book A Table Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">
