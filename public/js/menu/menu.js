@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+$("body").on("click", "#addtocart", async (e) =>
+    alert($(e.currentTarget).data("id"))
+);
+
     let urls="api/products";
     let method = "GET";
     let ids;
@@ -51,10 +55,10 @@ $(document).ready(function(){
         htm+='<div class="col-lg-6 menu-item filter-starters">'+
         '<div class="menu-content">'+
         '<a href="#">'+data[bb].name+'</a>'+
-        '<span>'+"$595"+'</span>'+
+        '<span>'+data[bb].price+'</span>'+
         '</div>'+
-        '<div class="menu-ingredients">'+'Lorem, deren, trataro, filede, nerada'+
-        '<button type="button" class="btn btn-outline-success btn-sm" style="float:right;">Add To Cart</button></div></div>';
+        '<div class="menu-ingredients">'+data[bb].description+
+        '<button type="button" class="btn btn-outline-success btn-sm" style="float:right;" id="addtocart" data-id='+data[bb].id+'>Add To Cart</button></div></div>';
         
     })
     divs.append(htm);

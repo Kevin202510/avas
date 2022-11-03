@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\CartsController;
+use App\Http\Controllers\CategoriesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,27 +23,28 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::prefix('/categories')->group(function() 
 {
-    Route::get('/', 'CategoriesController@index');
-    Route::get('/list', 'CategoriesController@list');
-    Route::post('/save', 'CategoriesController@save'); 
-    Route::put('/{categories}/update', 'CategoriesController@update');
-    Route::delete('/{categories}/destroy', 'CategoriesController@destroy');  
+    Route::get('/', [CategoriesController::class,'index']);
+    Route::get('/list', [CategoriesController::class,'list']);
+    Route::post('/save', [CategoriesController::class,'save']); 
+    Route::put('/{categories}/update', [CategoriesController::class,'update']);
+    Route::delete('/{categories}/destroy', [CategoriesController::class,'destroy']);  
 });
 
 Route::prefix('/products')->group(function() 
 {
-    Route::get('/', 'ProductsController@index');
-    Route::post('/selectmenu', 'ProductsController@selectmenu');
-    Route::post('/save', 'ProductsController@save'); 
-    Route::put('/{products}/update', 'ProductsController@update');
-    Route::delete('/{products}/destroy', 'ProductsController@destroy');  
+    Route::get('/', [ProductsController::class,'index']);
+    Route::post('/selectmenu', [ProductsController::class,'selectmenu']);
+    Route::get('/list', [ProductsController::class,'list']);
+    Route::post('/save', [ProductsController::class,'save']); 
+    Route::put('/{categories}/update', [ProductsController::class,'update']);
+    Route::delete('/{categories}/destroy', [ProductsController::class,'destroy']);  
 });
 
 Route::prefix('/carts')->group(function() 
 {
-    Route::get('/{customer_id}', 'CartController@index');
-    Route::post('/selectmenu', 'CartController@selectmenu');
-    Route::post('/save', 'CartController@save'); 
-    Route::put('/{carts}/update', 'CartController@update');
-    Route::delete('/{carts}/destroy', 'CartController@destroy');  
+    Route::get('/{customer_id}', [CartsController::class,'index']);
+    Route::get('/list', [CartsController::class,'list']);
+    Route::post('/save', [CartsController::class,'save']); 
+    Route::put('/{categories}/update', [CartsController::class,'update']);
+    Route::delete('/{categories}/destroy', [CartsController::class,'destroy']);    
 });

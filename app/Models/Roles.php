@@ -1,7 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Roles extends Model
@@ -10,3 +11,5 @@ class Roles extends Model
         'display_name',
     ];
 }
+
+

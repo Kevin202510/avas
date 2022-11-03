@@ -74,10 +74,10 @@
               <div class="carousel-container">
                 <div class="carousel-content">
                   <h2 class="animate__animated animate__fadeInDown"><span>AVAS</span> FOODSTAR RESTAURANT</h2>
-                  <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                  <p class="animate__animated animate__fadeInUp">Although the skills aren’t hard to learn, finding the happiness and finding the satisfaction and finding fulfillment in continuously serving somebody else something good to eat, is what makes a really good restaurant.</p>
                   <div>
-                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
-                    <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
+                    <a href="{{ route('Menus') }}" class="btn-menu animate__animated animate__fadeInUp scrollto">Our Menu</a>
+                    <a href="{{ route('Tables') }}" class="btn-book animate__animated animate__fadeInUp scrollto">Book a Table</a>
                   </div>
                 </div>
               </div>
