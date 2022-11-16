@@ -2,6 +2,7 @@
     <ul>
         <li><a class="nav-link scrollto {{ Request::is('customer') ? 'active' : '' }}" href="{{ route('Customer Home') }}">Home</a></li>
         <li><a class="nav-link scrollto {{ Request::is('menus') ? 'active' : '' }}" href="{{ route('Menus') }}">Menu</a></li>
+        <li><a class="nav-link scrollto {{ Request::is('book-tables') ? 'active' : '' }}" href="{{ route('Tables') }}">Book Table</a></li>
         @guest
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

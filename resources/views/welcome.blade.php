@@ -389,7 +389,7 @@
     </section><!-- End Events Section -->
 
     <!-- ======= Book A Table Section ======= -->
-    <section id="book-a-table" class="book-a-table">
+    <!-- <section id="book-a-table" class="book-a-table">
       <div class="container">
 
         <div class="section-title">
@@ -437,7 +437,8 @@
         </form>
 
       </div>
-    </section><!-- End Book A Table Section -->
+    </section> -->
+    <!-- End Book A Table Section -->
 
     <!-- ======= Gallery Section ======= -->
     <section id="gallery" class="gallery">

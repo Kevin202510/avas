@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Products;
-use App\User;
+use App\Models\User;
 
-class Cart extends Model
+class Carts extends Model
 {
     protected $fillable = [
         'user_id','product_id','quantity',

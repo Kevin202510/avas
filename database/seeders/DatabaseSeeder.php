@@ -1,5 +1,7 @@
 <?php
 
+namespace Database\Seeders;
+
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -18,7 +20,7 @@ class DatabaseSeeder extends Seeder
             CategoriesSeeder::class,
             ProductsSeeder::class,
             TablesSeeder::class,
-            CartSeeder::class,
+            CartsSeeder::class,
         ]);
     }
 }
